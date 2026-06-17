@@ -1,0 +1,30 @@
+.topnav{
+    background-color:maroon;
+    overflow: hidden;
+}
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+.topnav-right{
+    float: right;
+}
+.banner{
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    text-align: center;
+    color: maroon;
+}
