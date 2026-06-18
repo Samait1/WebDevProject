@@ -27,3 +27,20 @@ h1{
     text-align: center;
     color: maroon;
 }
+.sidebar {
+    float: center;
+    width: 30%;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+.sidebar a {
+    color:maroon;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    text-decoration: underline;
+}
+.sidebar ul{
+    list-style-type: none;
+    margin-bottom: 5px;
+}
