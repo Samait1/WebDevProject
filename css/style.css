@@ -1,8 +1,8 @@
-.body{
-    font-family: Arial, sans-serif;
+body{
+    font-family: Georgia, sans-serif;
     margin: 0;
     padding: 0;
-    background: color rgb(247, 246, 246);
+    background-color: black !important;
 }
 .topnav{
     background-color:maroon;
@@ -15,6 +15,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: 'Georgia', sans-serif;
 }
 .topnav a:hover{
     background-color: #ddd;
@@ -29,15 +30,17 @@
     background-size: cover;
     background-position: center;
 }
+
 h1{
     text-align: center;
-    color: maroon;
+    color: white !important;
+    font-family: 'Georgia', sans-serif;
 }
 .sidebar {
-    float: center;
+    margin:auto;
     width: 30%;
     padding: 20px;
-    background-color: #ecf0f1;
+    background-color:black;
 }
 .sidebar a {
     color:maroon;
@@ -59,4 +62,23 @@ h1{
     height: 450px;
     object-fit: cover;
     border-radius: 15px;
+}
+.card{
+    background-color: #121212;
+    color: white;
+    border: 1px solid maroon;
+}
+
+.card-body{
+    background-color: #121212;
+}
+
+.form-control{
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid maroon;
+}
+
+.form-control::placeholder{
+    color: #bdbdbd;
 }
