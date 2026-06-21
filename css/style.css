@@ -2,7 +2,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: color #f4ef93;
+    background: color rgb(247, 246, 246);
 }
 .topnav{
     background-color:maroon;
@@ -49,4 +49,14 @@ h1{
 .sidebar ul{
     list-style-type: none;
     margin-bottom: 5px;
+}
+#carouselExampleControls {
+    width: 70%;
+    margin: 30px auto;
+}
+
+.carousel-item img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
 }
