@@ -34,6 +34,20 @@ h1{
     color: white !important;
     font-family: 'Georgia', sans-serif;
 }
+
+h3{
+    text-align: center;
+    color: white !important;
+    font-family: 'Georgia', sans-serif;
+    margin-top: 20px;
+}
+
+p{
+    text-align: center;
+    color: white !important;
+    font-family: 'Georgia', sans-serif;
+    margin-top: 10px;
+}
 .sidebar {
     margin:auto;
     width: 30%;
