@@ -92,3 +92,26 @@ h1{
     bottom: 0;
     width: 100%;
 }
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+table th{
+    border: 1px solid black;
+    padding: 8px;
+    background-color: maroon;
+    color: white;
+}
+table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color:black;
+}
+tr:hover {
+    background-color:black;
+}
