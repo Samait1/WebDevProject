@@ -27,16 +27,19 @@
     <br>
     
     <div class="card shadow mb-5">
-        <div class="card-header bg-secondary text-white">>
+        <div class="card-header bg-danger text-white">>
             <h2 class="mb-0">Reserve</h2>
         </div>
 
         <div class="card-body">
             <form action="">
-                <input type="datetime-local" name="reservation time" class="form-control mb-3" required>
+                <label for="reservation time">Reservation Time:</label>
+                <input type="datetime-local" id="reservation time" name="reservation time" class="form-control mb-3" required>
 
+                <label for="party size">Party Size:</label>
                 <input type="number" id="party size" name="party size" class="form-control mb-3" placeholder="Party Size" min="1" max="12" required>
 
+                <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" class="form-control mb-3" placeholder="Email Address" required>
 
             </form>
