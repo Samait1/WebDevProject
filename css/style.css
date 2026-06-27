@@ -5,6 +5,10 @@ body{
     background-color: black !important;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex: 1;
 }
 .topnav{
     background-color:maroon;
@@ -25,6 +29,11 @@ body{
 }
 .topnav-right{
     float: right;
+}
+.topnav::after{
+    content: "";
+    display: block;
+    clear: both;
 }
 .banner{
     padding: 20px 0;
@@ -97,7 +106,7 @@ p{
     color: #bdbdbd;
 }
 
-.footer {
+footer {
     background-color: maroon !important;
     color: white;
     text-align: center;
