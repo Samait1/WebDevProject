@@ -1,3 +1,6 @@
+html{
+    background-color: black !important;
+}
 body{
     font-family: Georgia, sans-serif;
     margin: 0;
@@ -60,7 +63,7 @@ p{
     margin-top: 10px;
 }
 .sidebar{
-    background-color:#121212;
+    background-color:black;
     border:1px solid maroon;
     border-radius:10px;
     padding:20px;
@@ -79,7 +82,7 @@ p{
 }
 
 .sidebar a{
-    color:#dc3545;
+    color:maroon;
     text-decoration:none;
 }
 
@@ -103,19 +106,19 @@ p{
     border-radius: 15px;
 }
 .card{
-    background-color: #121212;
-    color: white;
-    border: 1px solid maroon;
+    background-color:black;
+    border:1px solid maroon;
+    color:white;
 }
 
 .card-body{
-    background-color: #121212;
+    background-color: black;
 }
 
 .form-control{
-    background-color: #1e1e1e;
-    color: white;
-    border: 1px solid maroon;
+    background-color:black;
+    color:white;
+    border:1px solid maroon;
 }
 
 .form-control::placeholder{
