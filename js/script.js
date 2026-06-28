@@ -5,40 +5,40 @@ signupForm.addEventListener("submit", function(event){
 
     event.preventDefault();
 
-    let fullname = document.getElementById("signupFullname").value.trim();
-    let email = document.getElementById("signupEmail").value.trim();
-    let phone = document.getElementById("signupPhone").value.trim();
-    let password = document.getElementById("signupPassword").value;
+    let signupFullname = document.getElementById("signupFullname").value.trim();
+    let signupEmail = document.getElementById("signupEmail").value.trim();
+    let signupPhone = document.getElementById("signupPhone").value.trim();
+    let signupPassword = document.getElementById("signupPassword").value;
 
-    if(fullname.length < 3){
+    if(signupFullname.length < 3){
 
         alert("Name must contain at least 3 characters.");
         return;
 
     }
 
-    if(!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+    if(!signupEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
 
         alert("Please enter a valid email address.");
         return;
 
     }
 
-    if(password.length < 8){
+    if(signupPassword.length < 8){
 
         alert("Password must be at least 8 characters.");
         return;
 
     }
 
-    if(!phone.match(/^\d{10}$/)){
+    if(!signupPhone.match(/^\d{10}$/)){
 
         alert("Please enter a valid 10-digit phone number.");
         return;
 
     }
 
-    alert("🎉 Sign Up Successful!");
+    alert("Sign Up Successful!");
 
     signupForm.reset();
 
@@ -52,8 +52,47 @@ signinForm.addEventListener("submit", function(event){
 
     event.preventDefault();
 
-    let email = document.getElementById("signinEmail").value.trim();
-    let password = document.getElementById("signinPassword").value;
+    let signinEmail = document.getElementById("signinEmail").value.trim();
+    let signinPassword = document.getElementById("signinPassword").value;
+
+    if(!signinEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+
+        alert("Please enter a valid email address.");
+        return;
+
+    }
+
+
+    if(signinPassword.length < 8){
+
+        alert("Password must be at least 8 characters.");
+        return;
+
+    }
+
+    alert("Sign In Successful!");
+
+})
+
+
+// reservation form validation
+const reservationForm = document.getElementById("reservationForm");
+
+reservationForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    let reservationName = document.getElementById("reservationName").value.trim();
+    let reservationTime = document.getElementById("reservationTime").value;
+    let partySize = document.getElementById("partySize").value;
+    let email = document.getElementById("email").value.trim();
+
+    if(reservationName.length < 3){
+
+        alert("Name must contain at least 3 characters.");
+        return;
+
+    }
 
     if(!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
 
@@ -62,13 +101,14 @@ signinForm.addEventListener("submit", function(event){
 
     }
 
-    if(password.length < 8){
+    if(partySize < 1 || partySize > 12){
 
-        alert("Password must be at least 8 characters.");
+        alert("Party size must be between 1 and 12.");
         return;
 
     }
 
-    alert("🎉 Sign In Successful!");
+    
 
+    alert("Reservation Successful!");
 })
