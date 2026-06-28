@@ -99,37 +99,27 @@ reservationForm.addEventListener("submit", function(event){
     let reservationEmail = document.getElementById("reservationEmail").value.trim();
 
     if (!reservationTime) {
-    alert("Please select a reservation date and time.");
-    return;
-}
+        alert("Please select a reservation date and time.");
+        return;
+    }
 
-let selectedTime = new Date(reservationTime);
-let currentTime = new Date();
+    let selectedTime = new Date(reservationTime);
+    let currentTime = new Date();
 
     if (selectedTime <= currentTime) {
         alert("Please select a future date and time for your reservation.");
         return;
     }
 
-    if(partySize < 1 || partySize > 12){
-
+    if (partySize < 1 || partySize > 12) {
         alert("Party size must be between 1 and 12.");
         return;
-
     }
 
-    if(!reservationEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
-
+    if (!reservationEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
         alert("Please enter a valid email address.");
         return;
-
     }
-
-    
-
-    
-
-    
 
     alert("Reservation Successful!");
 })
