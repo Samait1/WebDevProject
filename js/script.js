@@ -25,6 +25,13 @@ signupForm.addEventListener("submit", function(event){
 
     }
 
+    if(!signupPhone.match(/^\d{10}$/)){
+
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+
+    }
+
     if(signupPassword.length < 8){
 
         alert("Password must be at least 8 characters.");
@@ -32,12 +39,7 @@ signupForm.addEventListener("submit", function(event){
 
     }
 
-    if(!signupPhone.match(/^\d{10}$/)){
-
-        alert("Please enter a valid 10-digit phone number.");
-        return;
-
-    }
+    
 
     alert("Sign Up Successful!");
 
@@ -96,11 +98,17 @@ reservationForm.addEventListener("submit", function(event){
     let partySize = document.getElementById("reservationPartySize").value;
     let reservationEmail = document.getElementById("reservationEmail").value.trim();
 
-    if(!reservationEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+    if (!reservationTime) {
+    alert("Please select a reservation date and time.");
+    return;
+}
 
-        alert("Please enter a valid email address.");
+let selectedTime = new Date(reservationTime);
+let currentTime = new Date();
+
+    if (selectedTime <= currentTime) {
+        alert("Please select a future date and time for your reservation.");
         return;
-
     }
 
     if(partySize < 1 || partySize > 12){
@@ -110,18 +118,16 @@ reservationForm.addEventListener("submit", function(event){
 
     }
 
-    if (!reservationTime) {
-    alert("Please select a reservation date and time.");
-    return;
-}
+    if(!reservationEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
 
-let selectedTime = new Date(reservationTime);
-let currentTime = new Date();
+        alert("Please enter a valid email address.");
+        return;
 
-if (selectedTime <= currentTime) {
-    alert("Please select a future date and time for your reservation.");
-    return;
-}
+    }
+
+    
+
+    
 
     
 
