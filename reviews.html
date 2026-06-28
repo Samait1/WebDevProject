@@ -15,7 +15,7 @@
 
     <!-- Navigation Bar -->
     <div class="topnav">
-        <a href = "index.html">Home</a></a>
+        <a href = "index.html">Home</a>
         <a href = "menu.html">Menu</a>
         <a href = "reservations.html">Reservations</a>
         <a href = "contact.html">Contact Us</a>
@@ -39,20 +39,20 @@
 
 
         <div class="card-body">
-            <form action="">
+            <form action="" id="reviewForm">
 
-                <textarea class="form-control mb-3" rows="6"
+                <textarea class="form-control mb-3" id="reviewText" rows="6"
                     placeholder="Write your review here..."
                     required></textarea>
                 
-                <button type="submit" class="btn btn-danger text-white">
+                <button type="submit" id="reviewButton" class="btn btn-danger text-white">
                     Submit Review
                 </button>
             </form><br>
             
 
             <!-- Rating Section -->
-            <form action="">
+            <form action="" id="ratingForm">
                 <p>Leave a rating:</p>
   
                 <input type="radio" id="one" name="star" value="one" checked>
@@ -70,7 +70,7 @@
                 <input type="radio" id="five" name="star" value="five">
                 <label for="five">5 Stars</label><br>
 
-                <button type="submit" class="btn btn-danger text-white">
+                <button type="submit" id="ratingButton" class="btn btn-danger text-white">
                     Submit Rating
                 </button>
             </form>

@@ -1,6 +1,7 @@
 // sign up form validation
 const signupForm = document.getElementById("signupForm");
 
+if (signupForm){
 signupForm.addEventListener("submit", function(event){
 
     event.preventDefault();
@@ -44,9 +45,14 @@ signupForm.addEventListener("submit", function(event){
 
 });
 
+}
+
 
 //sign in form validation
 const signinForm = document.getElementById("signinForm");
+
+if (signinForm){
+
 
 signinForm.addEventListener("submit", function(event){
 
@@ -73,28 +79,24 @@ signinForm.addEventListener("submit", function(event){
     alert("Sign In Successful!");
 
 })
+}
 
 
 // reservation form validation
 const reservationForm = document.getElementById("reservationForm");
 
+if (reservationForm){
+
+
 reservationForm.addEventListener("submit", function(event){
 
     event.preventDefault();
 
-    let reservationName = document.getElementById("reservationName").value.trim();
     let reservationTime = document.getElementById("reservationTime").value;
-    let partySize = document.getElementById("partySize").value;
-    let email = document.getElementById("email").value.trim();
+    let partySize = document.getElementById("reservationPartySize").value;
+    let reservationEmail = document.getElementById("reservationEmail").value.trim();
 
-    if(reservationName.length < 3){
-
-        alert("Name must contain at least 3 characters.");
-        return;
-
-    }
-
-    if(!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+    if(!reservationEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
 
         alert("Please enter a valid email address.");
         return;
@@ -108,7 +110,25 @@ reservationForm.addEventListener("submit", function(event){
 
     }
 
+    if (!reservationTime) {
+    alert("Please select a reservation date and time.");
+    return;
+}
+
+let selectedTime = new Date(reservationTime);
+let currentTime = new Date();
+
+if (selectedTime <= currentTime) {
+    alert("Please select a future date and time for your reservation.");
+    return;
+}
+
     
 
     alert("Reservation Successful!");
 })
+}
+
+
+
+

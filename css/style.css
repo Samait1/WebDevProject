@@ -157,5 +157,5 @@ tr:nth-child(even) {
     background-color:black;
 }
 tr:hover {
-    background-color:black;
+    background-color:grey;
 }
